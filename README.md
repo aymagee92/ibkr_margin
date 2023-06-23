@@ -8,13 +8,21 @@ Over the years, Interactive Brokers (IB) has adjusted these percentages at vario
 So this package is a simple python script that plugs into their API using the IB_Insync wrapper to pull margin information and calculate the correct percentages.
 
 # There are a few requirements in order to pull the percentages:
+
 (1) You must have a margin account with Interactive Brokers that has over $2,000. Even if your account says margin, they are not allowed to extend margin if you are below this amount.
+
 (2) You must install Python onto your computer.
+
 (3) You must install Trader Workstation
+
 (4) You must install IB_Insync.
+
 (5) Inside Trader Workstation, you must enable socket clients and have a socket port that matches the python code. We will use 7496. Make sure "Read-Only API" is NOT checked.
+
 (6) You must have Trader Workstation up and running in the background.
+
 (7) OPTIONAL: If you want the software to automatically attempt to pull the stock price, you'll need to subscribe to market data. See link below for recommendation. The code has the ability to manually enter the price as well.
+
 https://www.reddit.com/r/IBKR_Help/comments/13y7fuf/recommended_data_subscriptions/
 
 # What is Margin?
@@ -23,7 +31,7 @@ For a stock, the potential loss matches the price of the stock. Therefore, a 30%
 Due to the spotty download issues of IB, this code does not look at option margin. However, margin for ATM % option typically approximates the same amount as the stock.
 As the option gets further ITM, the brokerage requires you put up more of the potential loss. As it gets further OTM, they will require less. The floor amount is 10% of the potential loss.
 
-What is the difference between initial margin and maintenance margin?
+# What is the difference between initial margin and maintenance margin?
 Initial margin is what you need to have in your account in order to initially take out the position.
 Maintenance is what is needed to be maintained in your account after it is taken out to avoid the brokerage either (1) auto-close your position, or (2) request more cash be deposited (margin call)
 IB claims to not do margin calls but it is reported that they provide multiple notification of pending margin issues and send notices asking you deposit more money, which is essentially a margin call.
@@ -31,10 +39,9 @@ IB claims to not do margin calls but it is reported that they provide multiple n
 # Some notes on using this script:
 (1) Note that Interactive Brokers provides two different accounts: a real account, and a "paper" account. 
     The "paper" account is a fake account that is suppose to simulate the real environment for testing strategies.
-    IB will update the margin in the real account. However, they do not update the margin percentages in the paper account, which severly limits the usefulness of it.
-    Therefore, it is recommended to run this script with the real account pulled up, so that you can get accurate percentages.
+    However, IB does not update the paper account with the lastest margin percentages.
+    Therefore, this should only be run while a real account is pulled up in Trader Workstation. Running with a paper account pulled up will result in incorrect information.
     This script will not place any trades, it will just go in and pull margin data.
-    If you run the script with the paper account pulled up, you will get incorrect data for some tickers.
 
 (2) The code goes into your Trader Workstation, pulls up a pretend order for 1 share of whichever stock or contract is specified, pulls up the Order Preview window,
     and pulls the margin data from that screen.
