@@ -62,9 +62,9 @@ IB claims to not do margin calls but it is reported that they provide multiple n
     If override is enabled, make sure the enter price data for ALL symbols and in the same exact order they are listed in the symbol_list.
     The software will return a message to the terminal for all stocks telling you wether it obtained the stock data from IB, the price list, or it skipped.
 
-(4) sort_by variable allows you to sort the results. you indicate the column you want to sort by. The first column is the symbol. So the first % column will be 2.
+(4) sort_by variable allows you to sort the results. you indicate the column you want to sort by. The first column is the symbol. So the first % column will be 1.
 
-    2 = stock long initial %
-    3 = stock long maintenance %
-    4 = stock short initial %
-    5 = stock short maintenance %
+    1 = stock long initial %
+    2 = stock long maintenance %
+    3 = stock short initial %
+    4 = stock short maintenance %
