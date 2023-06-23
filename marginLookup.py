@@ -29,7 +29,7 @@ def connectToStockData_IBKR(symbol,stock_IBKR_Formatted,enable_stock_price_overr
 
     ib.sleep(1)
 
-    print('\n',stockData)
+    #print('\n',stockData)
 
     if math.isnan(stockData.last):
         if enable_stock_price_override:
