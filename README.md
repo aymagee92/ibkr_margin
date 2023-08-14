@@ -36,6 +36,19 @@ Initial margin is what you need to have in your account in order to initially ta
 Maintenance is what is needed to be maintained in your account after it is taken out to avoid the brokerage either (1) auto-close your position, or (2) request more cash be deposited (margin call)
 IB claims to not do margin calls but it is reported that they provide multiple notification of pending margin issues and send notices asking you deposit more money, which is essentially a margin call.
 
+# If you are using IB Gateway
+You'll have to add an "account" parameter to the Order() class. Here is an example:
+
+    action = Order(
+            action = direction,
+            totalQuantity = 1,
+            orderType = orderType,   # 'MKT' or 'LMT'
+            lmtPrice = limitPrice,
+            tif = 'GTC',
+            outsideRth = True,
+            account = ACCOUNT_NUMBER
+    )
+
 # Some notes on using this script:
 (1) Note that Interactive Brokers provides two different accounts: a real account, and a "paper" account. 
     The "paper" account is a fake account that is suppose to simulate the real environment for testing strategies.
