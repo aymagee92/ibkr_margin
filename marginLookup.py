@@ -7,7 +7,7 @@ def connectToIBKR():
     # --- CONNECTING TO INTERACTIVE BROKERS ---
     print("\nConnecting to Interactive Brokers...",'\n')
     ib = IB()
-    ib.connect('127.0.0.1', 7496, clientId=random.randint(1,99))
+    ib.connect('127.0.0.1', 7496, clientId=1)
     return ib
 
 def format_stock_for_IBKR(symbol):
