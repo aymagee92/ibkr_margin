@@ -1,5 +1,7 @@
 # What this project does?
-When you have a margin account with Interactive Brokers, you are able to (1) sell short, and (2) put up less than 100% of the potential loss when you take out a position (long or short).
+When you have a margin account with Interactive Brokers, you are able to sell either stock or options.
+For stock, if you do not own the share of stock, then you will have to borrow it from the brokerage. This is termed "selling short".
+For options, you are required to put up a certain amount of money as collateral in case you show a loss. This is calculated by the brokerage and termed "margin".
 Interactive Brokers (IB) will tell you that you can check margin percentages in Trader Workstation by pulling up the description page or checking other various places.
 These percentages are just flat out incorrect. 
 Most show the default percentage of 25% for long and 30% for short. These are the "beginning" values that stocks are defaulted to unless IB changes it.
