@@ -88,8 +88,8 @@ You'll have to add an "account" parameter to the Order() class. Here is an examp
 
 Here is what I am subscribed to that allow for data of stocks and options:
 
-US Securities Snapshot and Futures Value Bundle
-This service will deliver NBBO snapshot quotes for all listed US equity issues as well as top of book data for CME Group Futures. Also includes Dow Jones Industrial Average, S&P 500 Index, and OTC Markets quotes. Note, US Equity NBBO snapshot quotes will cost an additional 0.01 USD above the listed subscription price and waiver.
+US Securities Snapshot and Futures Value Bundle  
+This service will deliver NBBO snapshot quotes for all listed US equity issues as well as top of book data for CME Group Futures. Also includes Dow Jones Industrial Average, S&P 500 Index, and OTC Markets quotes. Note, US Equity NBBO snapshot quotes will cost an additional 0.01 USD above the listed subscription price and waiver.  
 USD 10.00 /Month
 A monthly USD 10.00 fee will be waived whenever the monthly commissions generated in the account reaches USD 30.00.
 
