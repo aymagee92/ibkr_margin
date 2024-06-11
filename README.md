@@ -24,9 +24,8 @@ So this package is a simple python script that plugs into their API using the IB
 
 (6) You must have Trader Workstation up and running in the background.
 
-(7) OPTIONAL: If you want the software to automatically attempt to pull the stock price, you'll need to subscribe to market data. See link below for recommendation. The code has the ability to manually enter the price as well.
+(7) OPTIONAL: If you want the software to automatically attempt to pull the stock price, you'll need to subscribe to market data. See the very last section for recommended data subscriptions. The code has the ability to manually enter the price as well.
 
-https://www.reddit.com/r/IBKR_Help/comments/13y7fuf/recommended_data_subscriptions/
 
 # What is Margin?
 Simply put, the margin percentage tells you how much of the potential loss you have to pay for yourself. This is only relevant if your account type is a margin account.
@@ -84,3 +83,28 @@ You'll have to add an "account" parameter to the Order() class. Here is an examp
     2 = stock long maintenance %
     3 = stock short initial %
     4 = stock short maintenance %
+
+# Recommended Data Subscriptions
+Here is what I am subscribed to that allow for data of stocks and options:
+
+US Securities Snapshot and Futures Value Bundle
+
+This service will deliver NBBO snapshot quotes for all listed US equity issues as well as top of book data for CME Group Futures. Also includes Dow Jones Industrial Average, S&P 500 Index, and OTC Markets quotes. Note, US Equity NBBO snapshot quotes will cost an additional 0.01 USD above the listed subscription price and waiver.
+
+USD 10.00 /Month
+
+A monthly USD 10.00 fee will be waived whenever the monthly commissions generated in the account reaches USD 30.00.
+
+US Equity and Options Add-On Streaming Bundle
+
+Includes streaming realtime quotes for NYSE (CTA/Network A), AMEX (CTA/Network B), NASDAQ (UTP/Network C), and OPRA (US Options). In order to subscribe to US Equity and Options Add-On Streaming Bundle (NP), the user must already be subscribed to US Securities Snapshot and Futures Value Bundle (NP).
+
+USD 4.50 /Month
+
+Cboe One Add-On Bundle
+
+Realtime streaming quotes from the four Cboe US equity exchanges. In order to subscribe to Cboe One Add-On Bundle (NP,L1), the user must already be subscribed to US Securities Snapshot and Futures Value Bundle (NP). Fee is waived if commissions generated are greater than USD 5.00. Requires TWS Version 978 and above.
+
+USD 1.00 /Month
+
+A monthly USD 1.00 fee will be waived whenever the monthly commissions generated in the account reaches USD 5.00.
